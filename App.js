@@ -1,6 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View, FlatList, TextInput, KeyboardAvoidingView, TouchableOpacity } from 'react-native';
 import { send, subscribe } from 'react-native-training-chat-server';
+import Header from './Header';
 
 const NAME   = 'Rodolfo Peixoto';
 const CHANEL = 'Reactivate';
@@ -42,6 +43,7 @@ export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
+        <Header title={CHANEL} />
         <FlatList 
           data={this.state.message}
           renderItem={this.renderItem}
